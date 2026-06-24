@@ -1,0 +1,96 @@
+.dash-page { min-height:100vh; }
+.dash-wrap  { max-width:1260px; margin:0 auto; padding:28px 22px; }
+
+.dash-header {
+  display:flex; align-items:flex-start; justify-content:space-between;
+  flex-wrap:wrap; gap:16px; margin-bottom:24px;
+}
+.dash-header h1 { font-family:'Poppins',sans-serif; font-size:26px; font-weight:700; margin-bottom:4px; }
+.dash-header p  { color:rgba(255,255,255,0.5); font-size:14px; }
+
+/* stats */
+.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:22px; }
+.stat-card { display:flex; align-items:center; gap:16px; padding:20px 22px; }
+.stat-icon { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:24px; flex-shrink:0; }
+.stat-icon.blue  { background:rgba(59,130,246,0.15); }
+.stat-icon.green { background:rgba(16,185,129,0.15); }
+.stat-icon.red   { background:rgba(239,68,68,0.15); }
+.stat-val { font-size:26px; font-weight:700; line-height:1; }
+.stat-lbl { font-size:13px; color:rgba(255,255,255,0.45); margin-top:2px; }
+
+.section-head { display:flex; align-items:center; justify-content:space-between; padding:20px 22px 14px; }
+.section-head h2 { font-size:17px; font-weight:600; }
+.count-tag {
+  background:rgba(59,130,246,0.12); color:#60a5fa;
+  padding:3px 12px; border-radius:100px; font-size:12px;
+}
+.land-table-wrap { overflow:hidden; }
+
+/* buyer stats */
+.buyer-stats { display:flex; gap:14px; }
+.bstat {
+  display:flex; flex-direction:column; align-items:center;
+  padding:12px 20px; background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08); border-radius:12px; min-width:80px;
+}
+.bstat b    { font-size:22px; font-weight:700; color:#60a5fa; }
+.bstat span { font-size:11px; color:rgba(255,255,255,0.45); margin-top:2px; }
+
+/* tabs */
+.tabs { display:flex; gap:6px; margin-bottom:18px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:5px; width:fit-content; }
+.tab {
+  display:flex; align-items:center; gap:8px;
+  padding:9px 18px; border:none; border-radius:9px;
+  background:transparent; color:rgba(255,255,255,0.5);
+  font-size:14px; font-weight:500; cursor:pointer;
+  font-family:'Inter',sans-serif; transition:all 0.2s;
+}
+.tab:hover  { color:#fff; background:rgba(255,255,255,0.04); }
+.tab.active { background:#3b82f6; color:#fff; box-shadow:0 4px 14px rgba(59,130,246,0.3); }
+.tbadge {
+  background:rgba(255,255,255,0.15); padding:1px 7px;
+  border-radius:100px; font-size:11px; font-weight:600;
+}
+
+/* search */
+.search-row {
+  display:flex; align-items:center; gap:12px;
+  padding:11px 16px; margin-bottom:20px;
+}
+.search-inp {
+  flex:1; background:none; border:none; outline:none;
+  color:#fff; font-size:14px; font-family:'Inter',sans-serif;
+}
+.search-inp::placeholder { color:rgba(255,255,255,0.3); }
+.clr-btn {
+  background:rgba(255,255,255,0.08); border:none; color:rgba(255,255,255,0.5);
+  width:22px; height:22px; border-radius:5px; cursor:pointer; font-size:11px;
+}
+
+/* land grid */
+.land-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:18px; }
+
+/* land card */
+.land-card { overflow:hidden; transition:transform 0.25s,box-shadow 0.25s; }
+.land-card:hover { transform:translateY(-4px); box-shadow:0 18px 45px rgba(0,0,0,0.45); }
+
+.lc-img { position:relative; height:195px; background:rgba(255,255,255,0.04); overflow:hidden; }
+.lc-img img    { width:100%; height:100%; object-fit:cover; transition:transform 0.4s; }
+.land-card:hover .lc-img img { transform:scale(1.04); }
+.lc-noimg { display:flex; align-items:center; justify-content:center; height:100%; font-size:52px; color:rgba(255,255,255,0.15); }
+.lc-img .badge { position:absolute; top:10px; right:10px; }
+
+.lc-body   { padding:16px; }
+.lc-body h3 { font-size:15px; font-weight:600; margin-bottom:5px; line-height:1.4; }
+.lc-seller  { font-size:13px; color:rgba(255,255,255,0.5); margin-bottom:7px; }
+.lc-meta    { font-size:12px; color:rgba(255,255,255,0.4); margin-bottom:4px; line-height:1.5; }
+.lc-price   { font-size:21px; font-weight:700; color:#14b8a6; margin:10px 0; }
+.lc-actions { display:flex; gap:8px; flex-wrap:wrap; }
+
+@media(max-width:640px){
+  .stats-row { grid-template-columns:1fr; }
+  .tabs { width:100%; }
+  .tab  { flex:1; justify-content:center; font-size:13px; padding:8px 10px; }
+  .land-grid { grid-template-columns:1fr; }
+  .buyer-stats { display:none; }
+}

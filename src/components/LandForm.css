@@ -1,0 +1,49 @@
+.lf-modal { max-width:720px; }
+
+.lf-head {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 24px; border-bottom:1px solid rgba(255,255,255,0.07);
+  position:sticky; top:0; background:#111827; z-index:10;
+}
+.lf-head h2 { font-size:19px; font-weight:700; }
+.lf-close {
+  width:30px; height:30px; border-radius:8px; border:none;
+  background:rgba(255,255,255,0.07); color:rgba(255,255,255,0.6);
+  cursor:pointer; font-size:14px; display:flex; align-items:center; justify-content:center;
+}
+.lf-close:hover { background:rgba(239,68,68,0.2); color:#ef4444; }
+
+.lf-form { padding:4px 24px 0; }
+
+.lf-section { padding:18px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.lf-section:last-of-type { border-bottom:none; }
+.lf-sec-title {
+  font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.5px;
+  color:#60a5fa; margin-bottom:14px;
+}
+
+.lf-hint { font-size:12px; color:rgba(255,255,255,0.35); margin-top:8px; }
+.lf-hint a { color:#60a5fa; }
+
+.lf-upload {
+  border:2px dashed rgba(255,255,255,0.12); border-radius:12px;
+  padding:28px; text-align:center; cursor:pointer; transition:all 0.2s;
+}
+.lf-upload:hover { border-color:#3b82f6; background:rgba(59,130,246,0.04); }
+
+.lf-placeholder span { font-size:36px; display:block; margin-bottom:8px; }
+.lf-placeholder p    { font-size:14px; color:rgba(255,255,255,0.55); margin-bottom:4px; }
+.lf-placeholder small{ font-size:12px; color:rgba(255,255,255,0.3); }
+
+.lf-previews { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; }
+.lf-prev-img { width:76px; height:76px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,0.1); }
+.lf-add-more {
+  width:76px; height:76px; border:2px dashed rgba(255,255,255,0.15); border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; color:rgba(255,255,255,0.35);
+}
+
+.lf-footer {
+  display:flex; justify-content:flex-end; gap:12px;
+  padding:16px 0 24px; border-top:1px solid rgba(255,255,255,0.07); margin-top:4px;
+}
